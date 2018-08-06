@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../mystyles/index.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.3.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/popper.min.js"></script>
+    <title>Contact</title>
+</head>
+<body>
+    <header></header>
+    <div class="container">
+        <form class="needs-validation" novalidate id="contactmeform">
+            <fieldset class="form-group">
+                <legend>Contact Me</legend>
+                <div class="form-row">
+                    <label class="col-form-label" for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Name" required />
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-row">
+                    <label class="col-form-label" for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email" required />
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-row">
+                    <label class="col-form-label" for="email">Message</label>
+                    <input type="text" class="form-control" id="message" placeholder="Message" required />
+                    <div class="invalid-feedback"></div>
+                </div>
+            </fieldset>
+            <button class="btn btn-primary" type="submit">Send your message</button>
+        </form>
+    </div>
+    <footer></footer>
+    <script src="../myscripts/contactme.js"></script>
+</body>
+</html>

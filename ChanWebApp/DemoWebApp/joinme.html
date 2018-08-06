@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../mystyles/intlTelInput.min.css" rel="stylesheet" />
+    <link href="../mystyles/signup.css" rel="stylesheet" />
+    <link href="../mystyles/index.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.3.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/popper.min.js"></script>
+    <script src="../myscripts/intlTelInput.min.js"></script>
+    <title>Join me</title>
+</head>
+<body>
+    <header></header>
+    <h2 style="text-align: center;">Join me</h2>
+    <div class="container" id="formcontainer">
+        <form class="needs-validation" novalidate id="joinmeform">
+            <fieldset class="form-group">
+                <legend>Personal Details</legend>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label class="col-form-label" for="firstname">First name</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="First name" required />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group col">
+                        <label class="col-form-label" for="lastname">Last name</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Last name" required />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-6">
+                        <label class="col-form-label" for="age">Age</label>
+                        <input type="number" min="15" max="100" class="form-control" id="age" placeholder="Age" required /> <!--validity.valid||(value='');-->
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group col-6">
+                        <label class="col-form-label">Gender</label>
+                        <br />
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="Male" checked>
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="other" value="Other">
+                            <label class="form-check-label" for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="form-group" id="mailAddr">
+                <legend>Mailing Address</legend>
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label class="col-form-label" for="zipcode">Zipcode</label>
+                        <input type="text" class="form-control" id="zipcode" placeholder="Zipcode" required />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group col-8">
+                        <label class="col-form-label" for="country">Country</label>
+                        <select id="country" class="form-control"></select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-3">
+                        <label class="col-form-label" for="housenum">House Number</label>
+                        <input type="text" class="form-control" id="housenum" placeholder="House #" required />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group col-9">
+                        <label class="col-form-label" for="street">Street</label>
+                        <input type="text" class="form-control" id="street" placeholder="Street" required />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label class="col-form-label" for="city">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="City" required />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group col">
+                        <label class="col-form-label" for="state">State</label>
+                        <input type="text" class="form-control" id="state" placeholder="State" required />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group form-inline">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="checkAddress" checked />
+                    <label class="form-check-label col-form-label" for="checkAddress">Permanent address is the same as mailing address.</label>
+                </div>
+            </div>
+            <fieldset class="form-group" id="permAddr">
+                <legend>Permanent Address</legend>
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label class="col-form-label" for="pzipcode">Zipcode</label>
+                        <input type="text" class="form-control" id="pzipcode" name="perm" placeholder="Zipcode" />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group col-8">
+                        <label class="col-form-label" for="pcountry">Country</label>
+                        <select id="pcountry" class="form-control" name="perm"></select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-3">
+                        <label class="col-form-label" for="phousenum">House Number</label>
+                        <input type="text" class="form-control" id="phousenum" name="perm" placeholder="House #" />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group col-9">
+                        <label class="col-form-label" for="pstreet">Street</label>
+                        <input type="text" class="form-control" id="pstreet" name="perm" placeholder="Street" />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label class="col-form-label" for="pcity">City</label>
+                        <input type="text" class="form-control" id="pcity" name="perm" placeholder="City" />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group col">
+                        <label class="col-form-label" for="pstate">State</label>
+                        <input type="text" class="form-control" id="pstate" name="perm" placeholder="State" />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <legend>Contact Details</legend>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label class="col-form-label" for="phone">Phone</label>
+                        <br />
+                        <input type="tel" class="form-control" id="phone" required />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group col">
+                        <label class="col-form-label" for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email" required />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+            </fieldset>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="container" id="success">
+        <h1>Submitted succesfully!</h1>
+    </div>
+    <footer></footer>
+    <script src="../myscripts/joinme.js"></script>
+</body>
+</html>
