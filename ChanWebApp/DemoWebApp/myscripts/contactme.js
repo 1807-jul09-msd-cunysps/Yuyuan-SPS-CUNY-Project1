@@ -2,6 +2,7 @@
     $('#contactme').addClass('active');
 });
 $('footer').load('../Pages/footer.html');
+$('#success').hide();
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () { // from bootstrap form validation documentation
@@ -23,8 +24,8 @@ $('footer').load('../Pages/footer.html');
 })();
 
 function validate() {
-    var input = document.querySelectorAll('input.form-control');
-    var feedback = document.querySelectorAll('div.invalid-feedback');
+    var input = document.querySelectorAll('.form-control');
+    var feedback = document.querySelectorAll('.invalid-feedback');
     for (let i = 0; i < feedback.length; i++) {
         feedback[i].innerText = '';
         if (!input[i].checkValidity()) {
@@ -35,7 +36,7 @@ function validate() {
     return true;
 }
 
-$('#joinmeform').submit(function (e) {
+$('#contactmeform').submit(function (e) {
     e.preventDefault();
     var valid = validate();
     console.log(valid);
@@ -53,8 +54,14 @@ $('#joinmeform').submit(function (e) {
             },
             body: JSON.stringify(obj)
         }).then(res => res.json())
-            .catch(error => console.error('Error:', error))
-            .then(response => console.log('Success:', response));
+            //.catch(error => console.error('Error:', error))
+            //.then(response => console.log('Success:', response));
+            .catch(error => console.log(error))
+            .then(function (res) {
+                console.log(res);
+                $('#formcontainer').hide();
+                $('#success').show();
+            });
         return true;
     }
     return false;

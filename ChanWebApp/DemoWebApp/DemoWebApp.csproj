@@ -95,6 +95,7 @@
     <Content Include="myscripts\aboutme.js" />
     <Content Include="myscripts\contactme.js" />
     <Content Include="myscripts\joinme.js" />
+    <Content Include="mystyles\aboutme.css" />
     <Content Include="mystyles\signup.css" />
     <Content Include="Pages\footer.html" />
     <Content Include="Pages\header.html" />

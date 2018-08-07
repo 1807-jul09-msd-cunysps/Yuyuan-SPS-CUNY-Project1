@@ -3,6 +3,7 @@ $('header').load('../Pages/header.html', function () {
     $('#joinme').addClass('active');
 });
 $('footer').load('../Pages/footer.html');
+$('#success').hide();
 
 // toggling permanent address
 $("#permAddr").hide();
@@ -172,18 +173,6 @@ $('#joinmeform').submit(function (e) {
             }
         });
         return true;
-        // ajax call can be achieved by fetch API or XmlHttpRequest as well
-        // fetch API example
-        //fetch('https://chancunysps.azurewebsites.net/api/contactdirectory/post', {
-        //    method: 'POST',
-        //    mode: 'cors',
-        //    headers: {
-        //        'Content-Type': 'application/json; charset=utf-8'
-        //    },
-        //    body: JSON.stringify(obj)
-        //}).then(res => res.json())
-        //    .catch(error => console.error('Error:', error))
-        //    .then(response => console.log('Success:', response));
     }
     return false;
 });

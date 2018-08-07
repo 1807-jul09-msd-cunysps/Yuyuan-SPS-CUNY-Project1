@@ -7,11 +7,11 @@
     <script src="../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/popper.min.js"></script>
-    <title>Contact</title>
+    <title>Contact Me</title>
 </head>
 <body>
     <header></header>
-    <div class="container">
+    <div class="container" id="formcontainer">
         <form class="needs-validation" novalidate id="contactmeform">
             <fieldset class="form-group">
                 <legend>Contact Me</legend>
@@ -27,12 +27,17 @@
                 </div>
                 <div class="form-row">
                     <label class="col-form-label" for="email">Message</label>
-                    <input type="text" class="form-control" id="message" placeholder="Message" required />
+                    <textarea class="form-control" id="message" placeholder="Message" rows="4" required></textarea>
+                    <!--<input type="text" class="form-control" id="message" placeholder="Message" required />-->
                     <div class="invalid-feedback"></div>
                 </div>
             </fieldset>
             <button class="btn btn-primary" type="submit">Send your message</button>
         </form>
+    </div>
+    <div class="alert alert-success" role="alert" id="success">
+        <h5 class="alert-heading">Successful</h5>
+        <p>The form has been submitted.</p>
     </div>
     <footer></footer>
     <script src="../myscripts/contactme.js"></script>
